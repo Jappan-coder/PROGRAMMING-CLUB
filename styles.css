@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #1a1a2e, #16213e);
+    color: white;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00aaff;
+}
+
+.content {
+    margin-top: 100px;
+    font-size: 24px;
+}
+
+/* script.js */
+document.querySelectorAll('a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = this.getAttribute('href');
+        if (target !== '#') {
+            window.location.href = target;
+        }
+    });
+});
